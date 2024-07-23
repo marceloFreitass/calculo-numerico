@@ -7,9 +7,11 @@ clc
 % hline = refline(0, 0);
 % hline.Color = 'k'
 
-f = @(x) x^5 + 2*x^4 -x^3 + x^2 + 5*x - 1;
-a = 0.17;
-b = 2;
-epsilon = 0.00000001;
-x1 = bisseccao(f, a, b, epsilon);
-x2 = falsa_posicao(f, a, b, epsilon);
+f = @(x) log(x)+x - 5;
+a = 3;
+b = 4;
+epsilon = 0.0001;
+%x1 = bisseccao(f, a, b, epsilon);
+%x2 = falsa_posicao(f, a, b, epsilon)
+%x3  = newton(f, a, epsilon);
+x5 = secante(f, a, b, epsilon);
